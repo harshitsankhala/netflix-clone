@@ -3,6 +3,7 @@ import "./App.css";
 import Row from "./Row";
 import request from "./request";
 import Banner from "./Banner";
+import Nav from "./Nav";
 
 {
   /* <httpProtocol>  
@@ -21,6 +22,7 @@ import Banner from "./Banner";
 function App() {
   return (
     <div className="App">
+      <Nav />
       <Banner fetchUrl={request.fetchNetflixOriginals} />
       <Row
         title={`Netflix Originals`}
@@ -33,7 +35,7 @@ function App() {
       <Row title={`Comedy Movies`} fetchUrl={request.fetchComedyMovies} />
       <Row title={`Horror Movies`} fetchUrl={request.fetchHorrorMovies} />
       <Row title={`Romance Movies`} fetchUrl={request.fetchRomanceMovies} />
-      {/* <Row title={`Documentries`} fetchUrl={request.fetchDocumentaries} /> */}
+      <Row title={`Documentries`} fetchUrl={request.fetchDocumentaries} />
     </div>
   );
 }
